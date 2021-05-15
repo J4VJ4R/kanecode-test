@@ -1,0 +1,80 @@
+.slider{
+  position: relative;
+  max-width: rem(743);
+  &__img{
+    height: rem(768);
+    width: 100%;
+  }
+  &__logo{
+    position: absolute;
+    top: rem(30);
+    left: rem(329);
+  }
+  &__item{
+    list-style: none;
+    cursor: pointer;
+  }
+  &__item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+  }
+  &__title{
+    color: white;
+    font-size: rem(32);
+    font-weight: $SemiBold;
+    line-height: rem(48);
+    text-align: center;
+    letter-spacing: 0;
+    padding: 0 rem(100);
+    margin: 0;
+  }
+  &__text{
+    padding-left: rem(122);
+    padding-right: rem(121);
+    color: white;
+    font-size: rem(16);
+    letter-spacing: 0;
+    line-height: rem(24);
+    font-weight: normal;
+    text-align: center;
+    font-style: normal;
+    margin: 0;
+    opacity: 1;
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+  }
+  &__pagination{
+    margin: 0;
+    position: absolute;
+    bottom: 60px;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    left: rem(329);
+    &-item{
+      cursor: pointer;
+      color: white;
+      opacity: 1;
+      font-size: 14px;
+      content: "\f111";
+      letter-spacing: 7px;
+    }
+  }
+  &__description{
+    position: absolute;
+    top: rem(514);
+  }
+}
+.deactive{
+  color: white;
+}
+.active{
+  color: $color-one;
+}
