@@ -278,13 +278,16 @@ ul, li {
       border: 1px solid #C8D6E5; }
     .form__button--linkedin {
       background-color: #0077B7; }
+  .form .form__group-label1 {
+    position: relative; }
   .form__input-email {
+    position: relative;
     padding: 1rem 0;
     padding-left: 1.03125rem;
     border: 1px solid #8395A7;
     width: 95%;
     opacity: 1;
-    border-radius: 0.3125rem;
+    border-radius: 0.25rem;
     text-align: left;
     font-size: 0.875rem;
     letter-spacing: 0.13px;
@@ -294,12 +297,23 @@ ul, li {
     margin-bottom: 2.25rem; }
     .form__input-email:focus {
       outline: none; }
+  .form__error-email {
+    border: solid 2px #EE5253; }
+  .form__label-error-email {
+    display: none;
+    position: absolute;
+    color: #EE5253;
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+    line-height: 1rem;
+    top: 3.5rem;
+    left: 1rem; }
   .form__label-email {
     font-size: 0.875rem;
     color: #00000099;
     letter-spacing: 0.13px;
     position: relative;
-    top: -4.2rem;
+    top: -4.4rem;
     left: 1rem;
     cursor: text;
     transition: top 200ms ease-in, left 200ms ease-in; }
@@ -308,7 +322,7 @@ ul, li {
     padding-left: 1.03125rem;
     font-size: 0.875rem;
     color: #00000099;
-    border-radius: 0.3125rem;
+    border-radius: 0.25rem;
     letter-spacing: 0.13px;
     width: 95%;
     border: 1px solid #8395A7;
@@ -321,10 +335,35 @@ ul, li {
     color: #00000099;
     letter-spacing: 0.13px;
     position: relative;
-    top: -4.2rem;
+    top: -4.4rem;
     left: 1rem;
     cursor: text;
     transition: top 200ms ease-in, left 200ms ease-in; }
+  .form__label-error-password {
+    display: none;
+    position: absolute;
+    color: #EE5253;
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+    line-height: 1rem;
+    top: 3.5rem;
+    left: 1rem; }
+  .form__group-label2 {
+    position: relative; }
+  .form__error-password {
+    border: solid 2px #EE5253; }
+  .form__eye {
+    top: 1.145rem;
+    position: absolute;
+    width: 1.3175rem;
+    right: 1.2825rem;
+    cursor: pointer; }
+  .form__eye2 {
+    top: 1.145rem;
+    position: absolute;
+    width: 2rem;
+    right: 1.2825rem;
+    cursor: pointer; }
   .form__description2 {
     color: #6C5DD3;
     font-size: 1rem;
@@ -365,7 +404,7 @@ ul, li {
 
 .form__input-password:focus ~ .form__label-pass,
 .form__input-password:not(:placeholder-shown).form__input-password:not(:focus) ~ .form__label-pass {
-  top: -5.8rem;
+  top: -6.1rem;
   background-color: white;
   width: 18%;
   padding-left: 0.1875rem;
@@ -373,7 +412,7 @@ ul, li {
 
 .form__input-email:focus ~ .form__label-email,
 .form__input-email:not(:placeholder-shown).form__input-email:not(:focus) ~ .form__label-email {
-  top: -5.8rem;
+  top: -6rem;
   background-color: white;
   width: 27%;
   padding-left: 0.1875rem;

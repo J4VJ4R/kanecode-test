@@ -177,13 +177,17 @@
       background-color: #0077B7;
     }
   }
+  .form__group-label1{
+    position: relative;
+  }
   &__input-email{
+    position: relative;
     padding: rem(16) 0;
     padding-left: rem(16.5);
     border: 1px solid $color-three;
     width: 95%;
     opacity: 1;
-    border-radius: rem(5);
+    border-radius: rem(4);
     text-align: left;
     font-size: rem(14);
     letter-spacing: 0.13px;
@@ -195,12 +199,26 @@
       outline: none;
     }
   }
+  &__error-email{
+    border: solid 2px $error;
+  }
+  
+  &__label-error-email{
+    display: none;
+    position: absolute;
+    color: $error;
+    font-size: rem(12);
+    letter-spacing: rem(0.4);
+    line-height: rem(16);
+    top: 3.5rem;
+    left: 1rem;
+  }
   &__label-email{
     font-size: rem(14);
     color: $color-two;
     letter-spacing: 0.13px;
     position: relative;
-    top: -4.2rem;
+    top: -4.4rem;
     left: 1rem;
     cursor: text;
     transition: top 200ms ease-in,
@@ -211,7 +229,7 @@
     padding-left: rem(16.5);
     font-size: rem(14);
     color: $color-two;
-    border-radius: rem(5);
+    border-radius: rem(4);
     letter-spacing: 0.13px;
     width: 95%;
     border: 1px solid $color-three;
@@ -226,11 +244,41 @@
     color: $color-two;
     letter-spacing: 0.13px;
     position: relative;
-    top: -4.2rem;
+    top: -4.4rem;
     left: 1rem;
     cursor: text;
     transition: top 200ms ease-in,
       left 200ms ease-in;
+  }
+  &__label-error-password{
+    display: none;
+    position: absolute;
+    color: $error;
+    font-size: rem(12);
+    letter-spacing: rem(0.4);
+    line-height: rem(16);
+    top: 3.5rem;
+    left: 1rem;
+  }
+  &__group-label2{
+    position: relative;
+  }
+  &__error-password{
+    border: solid 2px $error;
+  }
+  &__eye{
+    top: rem(18.32);
+    position: absolute;
+    width: 1.3175rem;
+    right: rem(20.52);
+    cursor: pointer;
+  }
+  &__eye2{
+    top: rem(18.32);
+    position: absolute;
+    width: 2rem;
+    right: rem(20.52);
+    cursor: pointer;
   }
   &__description2{
     color: #6C5DD3;
@@ -277,7 +325,7 @@
 }
 .form__input-password:focus ~ .form__label-pass,
 .form__input-password:not(:placeholder-shown).form__input-password:not(:focus)~.form__label-pass{
-  top: -5.8rem;
+  top: -6.1rem;
   background-color: white;
   width: 18%;
   padding-left: rem(3);
@@ -285,7 +333,7 @@
 }
 .form__input-email:focus ~ .form__label-email,
 .form__input-email:not(:placeholder-shown).form__input-email:not(:focus)~.form__label-email{
-  top: -5.8rem;
+  top: -6rem;
   background-color: white;
   width: 27%;
   padding-left: rem(3);

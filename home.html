@@ -63,7 +63,7 @@
       </ol>
     </section>
     <section class="form">
-      <form class="form__primary" action="#" name="form-primary" method="POST">
+      <form class="form__primary"  name="form-primary" >
         <h2 class="form__title">Iniciar sesión</h2>
         <p class="form__description">Selecciona como deseas ingresar a la plataforma</p>
         <div class="form__buttons">
@@ -77,16 +77,23 @@
             <img src="./img/linkedin.png" alt="linkedin button to login" width="25">
           </a>
         </div>
-        <input class="form__input-email" type="email" name="email" id="email" autocomplete="off"
-        placeholder=" ">
-        <label class="form__label-email" for="email">Correo electónico</label>
-        <input class="form__input-password js-input-password" type="password" name="pass" id="pass"
-        autocomplete="off"  placeholder=" ">
-        <label class="form__label-pass" for="pass">Contraseña</label>
+        <div class="form__group-label1">
+          <input class="form__input-email js-input-email" type="email" name="email" id="email" autocomplete="off"
+          placeholder=" ">
+          <label class="form__label-email js-label-email" for="email">Correo electónico</label>
+          <label class="form__label-error-email js-label-error-email" for="email">error</label>
+        </div>
+        <div class="form__group-label2">
+          <input class="form__input-password js-input-password" type="password" name="pass" id="pass"
+          autocomplete="off"  placeholder=" " action="hide">
+          <label class="form__label-pass js-label-pass" for="pass">Contraseña</label>
+          <label class="form__label-error-password js-label-error-password" for="pass">error</label>
+          <img class="form__eye js-form-eye" src="./img/eye-open.svg" alt="eye open">
+        </div>
         <p class="form__description2">
           ¿Olvidaste tu contraseña?
         </p>
-        <button class="form__button-secondary" type="submit">Iniciar sesión</button>
+        <button class="form__button-secondary js-form-button-secondary" type="submit">Iniciar sesión</button>
         <p class="form__description3">
           ¿Aún no tienes cuenta? <span class="form__hightlight-1">Regístrate</span> 
         </p>
