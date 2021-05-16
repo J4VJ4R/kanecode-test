@@ -163,6 +163,12 @@
     @include display(desktop-down){
       padding: 0.69rem 1.9rem;
     }
+    @include display(tablet-small-down){
+      padding: 0.69rem 4.2rem;
+    }
+    @include display(mobile){
+      padding: 0.69rem 1.9rem;
+    }
     &--google{
       background-color: white;
       border: 1px solid #C8D6E5;
@@ -259,6 +265,10 @@
     font-size: rem(16);
     letter-spacing: 0;
     line-height: rem(24);
+    margin: 0;
+    @include display(tablet-small-down){
+      margin-bottom: 3rem;
+    }
   }
   &__hightlight-1{
     color: #3345D7;
