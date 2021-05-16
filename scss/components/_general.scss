@@ -8,15 +8,17 @@ body{
 }
 //mixin to responsive design
 @mixin display($size) {
-  @if $size == small {
+  @if $size == mobile {
     @media (max-width: 576px) { @content; }
-  }@else if $size == mobile {
-    @media (max-width: 992px) { @content; }
   }@else if $size == tablet-small-down {
     @media (max-width: 768px) { @content; }
   }
   @else if $size == tablet-medium-up {
     @media (min-width: 992px) { @content; }
+  }@else if $size == tablet-medium-down {
+    @media (max-width: 992px) { @content; }
+  }@else if $size == desktop-down {
+    @media (max-width: 1280px) { @content; }
   }
 }
 .container{

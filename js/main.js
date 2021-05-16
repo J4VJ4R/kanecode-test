@@ -34,4 +34,8 @@ $(document).ready(function () {
     $('.js-slider-item').hide();
     $('.js-slider-item:nth-child('+ imgPos + ')').fadeIn();
   };
+  //changes about inputs on form
+  $('.js-input-password').focus(function(){
+    console.log('test')
+  });
 });

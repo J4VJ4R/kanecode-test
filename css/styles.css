@@ -117,19 +117,31 @@ ul, li {
   font-weight: 100;
   font-style: italic;
   font-display: swap; }
+.header {
+  display: flex; }
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column; } }
+
 .slider {
+  display: flex;
+  justify-content: center;
   position: relative;
-  max-width: 46.4375rem; }
+  width: 54.4%; }
+  @media (max-width: 768px) {
+    .slider {
+      width: 100%; } }
   .slider__img {
     height: 48rem;
     width: 100%; }
   .slider__logo {
     position: absolute;
-    top: 1.875rem;
-    left: 20.5625rem; }
+    top: 1.875rem; }
   .slider__item {
     list-style: none;
-    cursor: pointer; }
+    cursor: pointer;
+    display: flex;
+    justify-content: center; }
   .slider__item::before {
     content: '';
     position: absolute;
@@ -147,6 +159,21 @@ ul, li {
     letter-spacing: 0;
     padding: 0 6.25rem;
     margin: 0; }
+    @media (max-width: 768px) {
+      .slider__title {
+        padding: 0 1.25rem; } }
+    @media (max-width: 576px) {
+      .slider__title {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding-bottom: .5rem; } }
+    @media (max-width: 1280px) {
+      .slider__title {
+        padding: 0 1.25rem; } }
+    @media (max-width: 992px) {
+      .slider__title {
+        font-size: 1.5rem;
+        line-height: 2.5rem; } }
   .slider__text {
     padding-left: 7.625rem;
     padding-right: 7.5625rem;
@@ -159,17 +186,26 @@ ul, li {
     font-style: normal;
     margin: 0;
     opacity: 1; }
+    @media (max-width: 768px) {
+      .slider__text {
+        padding-left: 2.625rem;
+        padding-right: 2.5625rem; } }
+    @media (max-width: 1280px) {
+      .slider__text {
+        padding-left: 0.625rem;
+        padding-right: 0.5625rem; } }
   .slider__list {
     margin: 0;
     padding: 0; }
   .slider__pagination {
     margin: 0;
     position: absolute;
-    bottom: 60px;
+    bottom: 3.75rem;
     display: flex;
-    justify-content: center;
-    padding-left: 0;
-    left: 20.5625rem; }
+    padding-left: 0; }
+    @media (max-width: 576px) {
+      .slider__pagination {
+        bottom: 1.875rem; } }
     .slider__pagination-item {
       cursor: pointer;
       color: white;
@@ -179,12 +215,158 @@ ul, li {
       letter-spacing: 7px; }
   .slider__description {
     position: absolute;
-    top: 32.125rem; }
+    top: 30.125rem; }
 
 .deactive {
   color: white; }
 
 .active {
   color: #F9B76B; }
+
+.form {
+  width: 46.6%; }
+  @media (max-width: 768px) {
+    .form {
+      width: 100%; } }
+  .form__primary {
+    padding-left: 6.5rem;
+    padding-top: 5.8125rem;
+    padding-right: 6.625rem;
+    display: flex;
+    flex-direction: column; }
+    @media (max-width: 992px) {
+      .form__primary {
+        padding-left: 4.5rem;
+        padding-right: 4.625rem; } }
+  .form__title {
+    text-align: left;
+    font: normal normal 600 32px/42px Poppins;
+    letter-spacing: 0px;
+    color: #222F3E;
+    opacity: 1;
+    margin: 0;
+    margin-bottom: 0.625rem; }
+  .form__description {
+    text-align: left;
+    font: normal normal normal 16px/24px Poppins;
+    letter-spacing: 0px;
+    color: #8395A7;
+    opacity: 1;
+    margin: 0;
+    padding-bottom: 3.5625rem; }
+  .form__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.25rem; }
+  .form__button {
+    background-color: #3b5998;
+    padding: 0.69rem 3.4375rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center; }
+    @media (max-width: 1280px) {
+      .form__button {
+        padding: 0.69rem 1.9rem; } }
+    .form__button--google {
+      background-color: white;
+      border: 1px solid #C8D6E5; }
+    .form__button--linkedin {
+      background-color: #0077B7; }
+  .form__input-email {
+    padding: 1rem 0;
+    padding-left: 1.03125rem;
+    border: 1px solid #8395A7;
+    width: 95%;
+    opacity: 1;
+    border-radius: 0.3125rem;
+    text-align: left;
+    font-size: 0.875rem;
+    letter-spacing: 0.13px;
+    color: #00000099;
+    opacity: 1;
+    font-weight: normal;
+    margin-bottom: 2.25rem; }
+    .form__input-email:focus {
+      outline: none; }
+  .form__label-email {
+    font-size: 0.875rem;
+    color: #00000099;
+    letter-spacing: 0.13px;
+    position: relative;
+    top: -4.2rem;
+    left: 1rem;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in; }
+  .form__input-password {
+    padding: 1rem 0;
+    padding-left: 1.03125rem;
+    font-size: 0.875rem;
+    color: #00000099;
+    border-radius: 0.3125rem;
+    letter-spacing: 0.13px;
+    width: 95%;
+    border: 1px solid #8395A7;
+    margin-bottom: 2.1875rem;
+    cursor: text; }
+    .form__input-password:focus {
+      outline: none; }
+  .form__label-pass {
+    font-size: 0.875rem;
+    color: #00000099;
+    letter-spacing: 0.13px;
+    position: relative;
+    top: -4.2rem;
+    left: 1rem;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in; }
+  .form__description2 {
+    color: #6C5DD3;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    font-weight: normal;
+    text-align: right;
+    margin-bottom: 1.625rem;
+    cursor: pointer; }
+  .form__button-secondary {
+    margin: 0 auto;
+    border: none;
+    padding: 1.25rem 5.568rem;
+    background-color: #354BD4;
+    color: white;
+    font-size: 0.875rem;
+    letter-spacing: 0px;
+    font-weight: bold;
+    border-radius: 3.125rem;
+    cursor: pointer;
+    margin-bottom: 5.4375rem; }
+    .form__button-secondary:hover {
+      opacity: .9; }
+  .form__description3 {
+    text-align: center;
+    font-weight: normal;
+    color: #576574;
+    font-size: 1rem;
+    letter-spacing: 0;
+    line-height: 1.5rem; }
+  .form__hightlight-1 {
+    color: #3345D7;
+    cursor: pointer; }
+
+.form__input-password:focus ~ .form__label-pass,
+.form__input-password:not(:placeholder-shown).form__input-password:not(:focus) ~ .form__label-pass {
+  top: -5.8rem;
+  background-color: white;
+  width: 18%;
+  padding-left: 0.1875rem;
+  font-size: 0.75rem; }
+
+.form__input-email:focus ~ .form__label-email,
+.form__input-email:not(:placeholder-shown).form__input-email:not(:focus) ~ .form__label-email {
+  top: -5.8rem;
+  background-color: white;
+  width: 27%;
+  padding-left: 0.1875rem;
+  font-size: 0.75rem; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="robots" content="noindex,nofollow">
   <title>Kanecode</title>
@@ -27,7 +26,7 @@
           <img class="slider__img" src="./img/programmer.jpg" alt="programmer">
           <img class="slider__logo" src="./img/logo.svg" alt="logo">
           <section class="slider__description">
-            <h1 class="slider__title">Citizen developers dolor sit amet, consectetur adipiscing eli</h1>
+            <h1 class="slider__title">Empresas ipsum dolor sit amet consectetur adipisicing.</h1>
             <p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore magna aliqua.</p>
           </section>
@@ -64,7 +63,34 @@
       </ol>
     </section>
     <section class="form">
-      
+      <form class="form__primary" action="#" name="form-primary" method="POST">
+        <h2 class="form__title">Iniciar sesión</h2>
+        <p class="form__description">Selecciona como deseas ingresar a la plataforma</p>
+        <div class="form__buttons">
+          <a class="form__button" href="#">
+            <img src="./img/facebook-icon.svg" alt="facebook button to login">
+          </a>
+          <a class="form__button form__button--google" href="#">
+            <img src="./img/icon-google.png" alt="google button to login" width="17">
+          </a>
+          <a class="form__button form__button--linkedin" href="#">
+            <img src="./img/linkedin.png" alt="linkedin button to login" width="25">
+          </a>
+        </div>
+        <input class="form__input-email" type="email" name="email" id="email" autocomplete="off"
+        placeholder=" ">
+        <label class="form__label-email" for="email">Correo electónico</label>
+        <input class="form__input-password js-input-password" type="password" name="pass" id="pass"
+        autocomplete="off"  placeholder=" ">
+        <label class="form__label-pass" for="pass">Contraseña</label>
+        <p class="form__description2">
+          ¿Olvidaste tu contraseña?
+        </p>
+        <button class="form__button-secondary" type="submit">Iniciar sesión</button>
+        <p class="form__description3">
+          ¿Aún no tienes cuenta? <span class="form__hightlight-1">Regístrate</span> 
+        </p>
+      </form>
     </section>
   </header>
   <!-- jquery -->
