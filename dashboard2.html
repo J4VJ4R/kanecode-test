@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Kanecode</title>
+  <meta name="description"
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in et, lectus sit lorem id integer.">
+  <!-- Icons and favicons -->
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <link rel="stylesheet" href="css/icomoon/style.css">
+  <!-- STYLES CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="vendor/normalize.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header class="header container">
+      <section class="search">
+        <span class="search__icon icon-search"></span>
+        <input class="search__input" type="text" placeholder="Buscar...">
+      </section>
+      <section class="profile">
+        <span class="profile__icon-help icon-help"></span>
+        <img class="profile__notification" src="./img/notification.svg" alt="notification">
+        
+        <img class="profile__email" src="./img/email.svg" alt="email notification">
+        <img class="profile__img" src="./img/profile1.png" alt="img profile" width="39">
+        <span class="profile__name">Liliana Mora</span>
+        <span class="icon-arrow profile__arrow"></span>
+      </section>
+    </header>
+  </div>
+  <main class="container">
+    <section class="content">
+
+      <aside class="nav">
+        <ul class="nav__list">
+          <a class="nav__link nav__link--bold" href="#"><span class="nav__icon nav__icon--left icon-nav "></span>Prendo</a>
+          <span class="nav__icon nav__icon--hide nav__icon--left icon-nav-2"></span>
+          <img class="nav__p" src="./img/P.svg" alt="letter p">
+          <li class="nav__item js-nav-item nav__link--active">
+            <a class="nav__link nav__link--active js-nav-link" href="#">
+              <span class="nav__icon js-nav-icon nav__icon--active icon-general"></span>Vista general
+            </a>
+            <span class="nav__icon js-nav-icon nav__icon--active nav__icon--hide icon-general "></span>
+          </li>
+          <li class="nav__item js-nav-item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon  icon-programs-courses"></span>Programas y Cursos
+            </a>
+            <span class="nav__icon js-nav-icon nav__icon--hide icon-programs-courses"></span>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon icon-design"></span>Diseña tu sitio
+            </a> 
+            <span class="nav__icon icon-design nav__icon--hide"></span>
+          </li>
+          <li class="nav__item"> 
+            <a class="nav__link" href="#">
+              <span class="nav__icon icon-database"></span>Estudiantes / Clientes
+            </a> 
+            <span class="nav__icon icon-database nav__icon--hide"></span>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon icon-marketing"></span>Marketing y ventas
+            </a>
+            <span class="nav__icon icon-marketing nav__icon--hide"></span>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon icon-analitics"></span>Analítica y reporte
+            </a>
+            <span class="nav__icon icon-analitics nav__icon--hide"></span>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">
+              <span class="nav__icon icon-settings"></span>Configuración
+            </a> 
+            <span class="nav__icon icon-settings nav__icon--hide"></span>
+          </li>
+        </ul>
+      </aside>
+      <section class="titles">
+        <div class="titles__head">
+          <h1 class="titles__primary">¡Hola Liliana, así van tus programas!</h1>
+          <h2 class="titles__secondary">Vista general</h2>
+        </div>
+        <div class="titles__date">
+          <div class="titles__date-number">
+            <img class="titles__date-img" src="./img/date.svg" alt="date icon">
+  
+            <p class="titles__day">23</p>
+            <p class="titles__month">NOV</p>
+          </div>
+          <div class="titles__descriptions">
+            <p class="titles__description1">Curso de fotografía de alimentos</p>
+            <p class="titles__description2">Calificar actividad del módulo 2</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="data">
+      <div class="data__students-primary">
+        <div class="data__element">
+          <h2 class="data__element-head">08</h2>
+          <p class="data__element-description">Cursos activos</p>
+        </div>
+        <div class="data__element">
+          <h2 class="data__element-head">123</h2>
+          <p class="data__element-description">Nuevas Oportunidades</p>
+        </div>
+        <div class="data__element">
+          <h2 class="data__element-head">45</h2>
+          <p class="data__element-description">Estudiantes registrados</p>
+        </div>
+        <div class="data__element data__element-border">
+          <h2 class="data__element-head">20</h2>
+          <p class="data__element-description">Certificados entregados</p>
+        </div>
+        <div class="data__element">
+          <p class="data__element-description data__element-description--center">Tus Estudiantes</p>
+        </div>
+        <div class="data__element">
+          <img src="./img/circle.png" alt="circle data">
+        </div>
+        <div>
+        </div>
+      </div>
+      <div class="data__message data__message--students">
+        <p class="data__message-text"><span class="data__message-point1">.</span>14 Activos</p>
+        <p class="data__message-text"><span class="data__message-point2">.</span>22 Inactivos</p>
+      </div>
+    </section>
+  </main>
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Js-->
+  <script src="./js/main.js"></script>
+  <!-- fa awesome -->
+</body>
+
+</html>

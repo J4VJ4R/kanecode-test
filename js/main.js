@@ -41,13 +41,13 @@ $(document).ready(function () {
     if(pass == 'password'){
       $('.js-input-password').attr('type', 'text')
         .add().attr('action', 'show');
-      $('.js-form-eye').attr('src', './img/icon-google.png');
+      $('.js-form-eye').attr('src', './img/eye-open.svg');
       
     }
     if(action == 'show'){
       $('.js-input-password').attr('type', 'password');
       $('.js-input-password').add().attr('action', 'hide')
-      $('.js-form-eye').attr('src', './img/eye-open.svg');
+      $('.js-form-eye').attr('src', './img/close-eye.svg');
     }
   });
   //validating fields on form
@@ -70,4 +70,12 @@ $(document).ready(function () {
       return false;
     }
   })
+  //dashboard
+  //active buttons
+  $(document).on('click', 'li', function(){
+    $(this).addClass('nav__link--active').siblings().removeClass('nav__link--active');
+    $('.js-nav-link').removeClass('nav__link--active');
+    $('.js-nav-icon').removeClass('nav__icon--active');
+  })
+  
 });
