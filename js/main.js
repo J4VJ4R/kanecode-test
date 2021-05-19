@@ -1,3 +1,4 @@
+
 //slider on home
 $(document).ready(function () {
   let imgItem = $('.slider__item').length;
@@ -77,5 +78,66 @@ $(document).ready(function () {
     $('.js-nav-link').removeClass('nav__link--active');
     $('.js-nav-icon').removeClass('nav__icon--active');
   })
+  
+});
+//section charts
+let ctx = document.getElementById('chart1').getContext('2d');
+let chartCircle = document.getElementById('chart-circle').getContext('2d');
+//circle chart
+const chartCircle1 = new Chart(chartCircle, {
+  type: 'doughnut',
+  data:{
+
+    datasets: [{
+      backgroundColor: [
+        '#AEDDEB',
+        '#6C5DD3'
+      ],
+      data: [4, 12],
+      hoverOffset: 0,
+      radius: 70,
+    }]
+  }
+});
+let chart2 = new Chart(ctx, {
+  type: 'bar',
+  data:{
+    labels: ['Oct', 'Nov', 'Dic', 'Ene', 'Feb', 'Mar'],
+    datasets:[{
+      label: 'Nuevos',
+      backgroundColor: 'rgba(117, 131, 222, 1)',
+      data:[10, 9, 30, 33, 5, 16],
+      "borderWidth":"0"
+    },
+    {
+      backgroundColor: '#AEDDEB',
+      data:[11, 8, 12, 16, 5, 18],
+      label: 'Recurrentes',
+    }],
+    
+  },
+  options: {
+    scales: {
+      
+      y: {
+        grid: {
+          display: false,
+          borderColor: 'transparent'
+        }
+      },
+      x: {
+        grid: {
+          display: false,
+          borderColor: 'transparent'
+        }
+      }
+    },
+    plugins: {      
+      legend: {
+        display: false,
+      }
+    },
+    
+  },
   
 });

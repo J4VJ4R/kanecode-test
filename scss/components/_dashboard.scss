@@ -240,6 +240,7 @@
     @include display(tablet-small-down){
       padding-left: 0;
       margin-top: -2rem;
+      margin-bottom: 2rem;
     }
     &-number{
       position: relative;
@@ -387,5 +388,140 @@
       top: -0.1rem;
       right: 4.9rem;
     }
+  }
+}
+.chart{
+  background-color: $color-seven;
+  padding-left: rem(315);
+  display: flex;
+  @include display(tablet-small-down){
+    padding-left: 4.6875rem;
+    flex-direction: column;
+  }
+  &__data{
+    margin-top: rem(30);
+    background-color: white;
+    border-radius: rem(20);
+    display: flex;
+    margin-bottom: 2rem;
+  }
+  &__box{
+    background-color: transparent;
+    padding-top: rem(30);
+    &-1{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(30);
+      border-radius: 20px;
+    }
+    &-text{
+      padding-top: rem(30);
+      padding-bottom: rem(25);
+    }
+    &-img{
+      padding-left: rem(10);
+      padding-right: rem(7);
+      padding-top: rem(22);
+      padding-bottom: rem(30);
+      &-2{
+        padding-left: rem(29);
+        padding-right: rem(25);
+        padding-top: rem(26);
+        padding-bottom: rem(26);
+      }
+      &-3{
+        padding-left: rem(10.99);
+        padding-right: rem(13.41);
+        padding-top: rem(19.36);
+        padding-bottom: rem(16.67);
+      }
+      &-4{
+        padding-left: rem(23);
+        padding-right: rem(13.41);
+        padding-top: rem(25);
+        padding-bottom: rem(22);
+      }
+    }
+  }
+  &__title{
+    color: $color-five;
+    margin: 0;
+    font-size: rem(18);
+    letter-spacing: 0;
+    line-height: rem(27);
+    font-weight: $SemiBold;
+    padding-top: rem(45);
+    padding-left: rem(41);
+    padding-bottom: rem(45);
+  }
+  &__description{
+    &-1{
+      font-weight: bold;
+      margin: 0;
+      font-size: rem(14);
+      letter-spacing: 0;
+      line-height: rem(16);
+      color: $color-eleven;
+      padding-left: 3.3125rem;
+    }
+  }
+  &__primary{
+    background-color: white;
+    margin-right: rem(30);
+    padding-right: 6.9rem;
+    padding-top: 7.125rem;
+  }
+  
+  &__number{
+    color: $color-five;
+    font-size: rem(48);
+    font-weight: $SemiBold;
+    letter-spacing: 0;
+    line-height: rem(72);
+    padding-left: rem(37);
+    margin: 0;
+    
+  }
+}
+.results{
+  position: relative;
+  background-color: $color-seven;
+  padding-left: 19.6875rem;
+  top: -12.8rem;
+  &__white{
+    background-color: white;
+    display: flex;
+    max-width: 60%;
+    overflow: hidden;
+  }
+  &__box{
+    &:nth-child(1){
+      margin-left: rem(32);
+    }
+    background-color: white;
+    border: 1px solid $color-nine;
+    border-radius: 20px;
+    margin-right: .5rem;
+  }
+  &__title{
+    color: $color-twelve;
+    margin: 0;
+    font-size: rem(12);
+    letter-spacing: 0;
+    line-height: rem(16);
+    font-weight: bold;
+    padding-left: rem(27);
+    padding-top: rem(27);
+  }
+  &__description{
+    font-weight: $medium;
+    font-size: rem(32);
+    letter-spacing: 0;
+    line-height: rem(48);
+    color: $color-five;
+    padding-left: rem(27);
+    padding-bottom: rem(27);
+    padding-right: rem(27);
   }
 }
