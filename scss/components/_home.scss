@@ -1,341 +1,676 @@
-.header{
-  display: flex;
-  @include display(tablet-small-down){
-    flex-direction: column;
-  }
+
+.header-dash{
+  position: fixed;
+  z-index: 900;
+  background-color: white;
 }
-.slider{
+.icon-general:before {
+  content: "\e903";
+  color: $color-three;
+}
+.nav{
   display: flex;
-  justify-content: center;
-  position: relative;
-  width: 54.4%;
-  @include display(tablet-small-down){
-    width: 100%;
+  flex-direction: column;
+  background-color: white;
+  z-index: 901;
+  position: fixed;
+  
+  &__list{
+    padding-left: rem(14.580)
   }
-  &__img{
-    height: rem(768);
-    width: 100%;
-  }
-  &__logo{
-    position: absolute;
-    top: rem(30);
+  &__link{
+    text-decoration: none;
+    color: $color-five;
+    font-size: rem(14);
+    font-weight: $medium;
+    letter-spacing: 0;
+    line-height: rem(21);
+    padding: rem(18) rem(5);
+    display: block;
+    cursor:context-menu;
+    @include display(tablet-small-down){
+      display: none;
+    }
+    &--bold{
+      color: $color-five;
+      font-weight: bold;
+      font-size: rem(30);
+      line-height: rem(46);
+      padding-top: rem(39);
+    }
   }
   &__item{
-    list-style: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
+    padding-right: rem(20);
+    @include display(tablet-small-down){
+      padding-right: 0;
+    }
   }
-  &__item::before{
-    content: '';
+  &__icon{
+    @include display(tablet-small-down){
+      padding-bottom: rem(18);
+      padding-top: rem(17.58);
+      &--left{
+        padding-top: 3rem;
+      }
+    }
+  }
+  
+  &__icon::before{
+    color: $color-three;
+    padding-right: rem(16.33);
+    font-size: rem(19.67);
+    padding-left: rem(14.42);
+    
+  }
+  
+  &__icon--left::before{
+    padding-left: rem(.420);
+    width: rem(20);
+    height: rem(16);
+    color: $color-five;
+    cursor: pointer;
+    @include display(tablet-small-down){
+      padding-left: rem(14.420);
+      padding-top: 3rem;
+    }
+  }
+  &__icon--active::before{
+    color: white;
+  }
+  &__icon--hide{
+    display: none;
+  }
+  &__p{
+    padding-left: rem(15);
+    display: none;
+    padding-bottom: rem(34.94);
+    padding-top: rem(28);
+    @include display(tablet-small-down){
+      display: block;
+    }
+  }
+  @include display(tablet-small-down){
+    &__icon--hide{
+      display: block;
+    }
+  }
+}
+.nav__link:hover{
+  color: $color-six;
+  .nav__icon::before{
+    color: $color-six;
+  }
+}
+.nav__link--bold:hover{
+  color: $color-five;
+  
+  .nav__icon::before{
+    color: $color-five;
+  }
+}
+.nav__item:nth-child(10){
+  margin-top: rem(249);
+}
+//it class was created for js
+.nav__link--active{
+  @include display(tablet-small-down){
+    background-color: $color-six;
+    border-radius: rem(12);
+    .nav__icon::before{
+      border-radius: 12px;
+      color: white;
+      display: block;
+    }
+  }
+  .nav__link{
+    color: white;
+    background-color: $color-six;
+    border-radius: 12px;
+    .nav__icon::before{
+      color: white;
+    }
+  }
+}
+.search{
+  background-color: white;
+  display: flex;
+  left: rem(295);
+  @include display(mobile){
+    display: none;
+  }
+  &__icon{
+    padding-left: rem(295);
+    padding-top: rem(22);
+    padding-bottom: rem(14.68);
+    @include display(tablet-small-down){
+      padding-left: 5.4375rem;
+    }
+  }
+  &__input{
+    padding-top: rem(23);
+    padding-bottom: rem(15);
+    font-size: rem(14);
+    color: $color-three;
+    border: none;
+    padding-left: rem(14.68);
+    padding-right: rem(400);
+    &:focus{
+      outline: none;
+    }
+  }
+}
+.profile{
+  background-color: white;
+  display: flex;
+  position: absolute;
+  right: 0;
+  align-items: center;
+  top: 7px;
+  @include display(mobile){
+    width: 83%;
+    padding-left: 1rem;
+    top: 0px;
+  }
+  &__arrow{
+    padding-right: rem(31.65);
+    @include display(mobile){
+      padding-right: 1rem;
+    }
+  }
+  &__name{
+    padding-right: rem(10);
+  }
+  &__img{
+    padding-right: rem(19);
+    padding-top: rem(9.38);
+    padding-bottom: rem(9.62);
+  }
+  &__email{
+    padding-right: rem(39);
+    @include display(mobile){
+      padding-right: 1rem;
+    }
+  }
+  &__notification{
+    padding-right: rem(27.34);
+    @include display(mobile){
+      padding-right: 1rem;
+    }
+  }
+  &__icon-help{
+    padding-right: rem(36.52);
+    @include display(mobile){
+      padding-right: 1rem;
+    }
+  }
+}
+.content{
+  background-color: $color-seven;
+  display: flex;
+}
+.titles{
+  display: flex;
+  padding-top: rem(113);
+  padding-left: rem(315);
+  @include display(tablet-small-down){
+    flex-direction: column;
+    padding-top: 4.5625rem;
+    padding-left: 6.5625rem;
+  }
+  &__primary{
+    font-size: rem(24);
+    letter-spacing: 0;
+    line-height: rem(35);
+    color: $color-five;
+    font-weight: normal;
+    margin: 0;
+  }
+  &__secondary{
+    font-size: rem(48);
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: rem(60);
+    color: $color-five;
+    margin: 0;
+    @include display(tablet-small-down){
+      font-size: 2rem;
+    }
+  }
+  &__date{
+    position: relative;
+    padding-left: rem(215);
+    display: flex;
+    @include display(tablet-small-down){
+      padding-left: 0;
+      margin-top: -2rem;
+      margin-bottom: 2.5rem;
+    }
+    &-number{
+      position: relative;
+      top: rem(33);
+    }
+    &-img{
+      width: rem(53.5);
+      height: rem(53.5);
+    }
+  }
+  &__day{
+    font-size: rem(24);
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: rem(21);
+    margin: 0;
+    color: $color-five;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0,0,0,0.4);
+    top: rem(15);
+    left: rem(12);
+  }
+  &__month{
+    font-size: rem(10);
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: rem(21);
+    color: $color-five;
+    margin: 0;
+    position: absolute;
+    top: rem(31);
+    left: rem(14);
+  }
+  &__descriptions{
+    display: flex;
+    flex-direction: column;
+    padding-left: rem(13.5);
+    position: relative;
+    top: rem(44);
+    @include display(mobile){
+      padding-left: 0.3rem;
+    }
+  }
+  &__description1{
+    color: $error;
+    font-size: rem(14);
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: rem(21);
+    margin: 0;
+  }
+  &__description2{
+    font-size: rem(12);
+    color: $color-five;
+    font-weight: normal;
+    letter-spacing: 0;
+    margin: 0;
+    line-height: rem(21);
+  }
+}
+.data{
+  position: relative;
+  background-color: $color-seven;
+  padding-left: rem(315);
+  padding-top: rem(30);
+  padding-right: rem(59);
+  @include display(tablet-small-down){
+    padding-left: 4.6875rem;
+    padding-right: .8rem;
+  }
+  &__students-primary{
+    border-radius: rem(20);
+    background-color: white;
+    padding-top: rem(36);
+    padding-left: rem(37);
+    padding-bottom: rem(34);
+    display: flex;
+    
+    @include display(tablet-small-down){
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__element{
+    max-width: rem(159.125);
+    &-head{
+      color: $color-eight;
+      font-size: rem(48);
+      text-align: center;
+      letter-spacing: 0;
+      line-height: rem(72);
+      font-weight: $SemiBold;
+      margin: 0;
+    }
+    &-description{
+      color: $color-five;
+      font-size: rem(14);
+      letter-spacing: 0;
+      line-height: rem(21);
+      font-weight: normal;
+      margin: 0;
+      text-align: center;
+      padding: 0 1rem;
+      &--center{
+        padding-top: 3.8rem;
+      }
+    }
+    &-border{
+      border-right: 1px solid $color-nine;
+    }
+  }
+  &__message{
+    background-color: white;
+    border: 1px solid $color-nine;
+    box-shadow: 0px 12px 30px #0000001A;
+    border-radius: 5px;
+    max-width: 147px;
+    &-point1{
+      color: $color-six;
+      font-size: 52px;
+      font-weight: bold;
+      padding-left: rem(11);
+      padding-right: rem(11);
+      margin: 0;
+    }
+    &-point2{
+      color: $color-ten;
+      font-size: 52px;
+      font-weight: bold;
+      padding-left: rem(11);
+      padding-right: rem(11);
+      margin: 0;
+    }
+    &-text{
+      font-size: rem(12);
+      color: $color-eight;
+      margin: 0;
+      letter-spacing: 0;
+      line-height: rem(18);
+      padding-bottom: rem(11);
+      padding-right: 2rem;
+      
+    }
+    &--students{
+      position: absolute;
+      top: -0.1rem;
+      right: 4.9rem;
+    }
+  }
+}
+.chart{
+  background-color: $color-seven;
+  padding-left: rem(315);
+  display: flex;
+  @include display(tablet-small-down){
+    padding-left: 4.6875rem;
+    flex-direction: column;
+  }
+  &__data{
+    margin-top: rem(30);
+    background-color: white;
+    border-radius: rem(20);
+    display: flex;
+    margin-bottom: 2rem;
+    @include display(mobile){
+      flex-direction: column;
+    }
+  }
+  &__box{
+    background-color: transparent;
+    padding-top: rem(30);
+    margin-left: rem(30);
+    position: relative;
+    z-index: 900;
+    @include display(tablet-small-down){
+      margin-right: 1.875rem;
+    }
+    &-1{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(30);
+      border-radius: 20px;
+    }
+    &-text{
+      padding-top: rem(30);
+      padding-bottom: rem(25);
+    }
+    &-img{
+      padding-left: rem(10);
+      padding-right: rem(7);
+      padding-top: rem(22);
+      padding-bottom: rem(30);
+      &-2{
+        padding-left: rem(29);
+        padding-right: rem(25);
+        padding-top: rem(26);
+        padding-bottom: rem(26);
+      }
+      &-3{
+        padding-left: rem(10.99);
+        padding-right: rem(13.41);
+        padding-top: rem(19.36);
+        padding-bottom: rem(16.67);
+      }
+      &-4{
+        padding-left: rem(23);
+        padding-right: rem(13.41);
+        padding-top: rem(25);
+        padding-bottom: rem(22);
+      }
+    }
   }
   &__title{
-    color: white;
-    font-size: rem(32);
+    color: $color-five;
+    margin: 0;
+    font-size: rem(18);
+    letter-spacing: 0;
+    line-height: rem(27);
     font-weight: $SemiBold;
-    line-height: rem(48);
-    text-align: center;
-    letter-spacing: 0;
-    padding: 0 rem(100);
-    margin: 0;
-    @include display(tablet-small-down){
-      padding: 0 1.25rem;
-    }
-    @include display(mobile){
-      font-size: 1.2rem;
-      line-height: 2rem;
-      padding-bottom: .5rem;
-    }
-    @include display(desktop-down){
-      padding: 0 1.25rem;
-    }
-    @include display(tablet-medium-down){
-      font-size: 1.5rem;
-      line-height: 2.5rem;
-    }
-  }
-  &__text{
-    padding-left: rem(122);
-    padding-right: rem(121);
-    color: white;
-    font-size: rem(16);
-    letter-spacing: 0;
-    line-height: rem(24);
-    font-weight: normal;
-    text-align: center;
-    font-style: normal;
-    margin: 0;
-    opacity: 1;
-    @include display(tablet-small-down){
-      padding-left: 2.625rem;
-      padding-right: 2.5625rem;
-    }
-    @include display(desktop-down){
-      padding-left: 0.625rem;
-      padding-right: 0.5625rem;
-    }
-  }
-  &__list{
-    margin: 0;
-    padding: 0;
-  }
-  &__pagination{
-    margin: 0;
-    position: absolute;
-    bottom: rem(60);
-    display: flex;
-    padding-left: 0;
-    @include display(mobile){
-      bottom: rem(30);
-    }
-    &-item{
-      cursor: pointer;
-      color: white;
-      opacity: 1;
-      font-size: 14px;
-      content: "\f111";
-      letter-spacing: 7px;
-    }
+    padding-top: rem(45);
+    padding-left: rem(41);
+    padding-bottom: rem(45);
   }
   &__description{
-    position: absolute;
-    top: 30.125rem;
+    &-1{
+      font-weight: bold;
+      margin: 0;
+      font-size: rem(14);
+      letter-spacing: 0;
+      line-height: rem(16);
+      color: $color-eleven;
+      padding-left: 3.3125rem;
+    }
+  }
+  &__primary{
+    background-color: white;
+    padding-right: rem(47);
+    padding-top: 7.125rem;
+    border-radius: 20px;
+    @include display(mobile){
+      padding-right: 1.5rem;
+      padding-top: 0.125rem;
+    }
+  }
+  
+  &__number{
+    color: $color-five;
+    font-size: rem(48);
+    font-weight: $SemiBold;
+    letter-spacing: 0;
+    line-height: rem(72);
+    padding-left: rem(37);
+    margin: 0;
+    
   }
 }
-.deactive{
-  color: white;
+.results{
+  position: relative;
+  background-color: $color-seven;
+  margin-left: 19.6875rem;
+  top: -12.8rem;
+  @include display(tablet-small-down){
+    margin-left: 0;
+    top: 0.2rem;
+  }
+  &__white{
+    background-color: white;
+    display: flex;
+    max-width: 67%;
+    overflow: hidden;
+  }
+  &__box{
+    &:nth-child(1){
+      margin-left: rem(32);
+    }
+    background-color: white;
+    border: 1px solid $color-nine;
+    border-radius: 20px;
+    margin-right: .5rem;
+  }
+  &__title{
+    color: $color-twelve;
+    margin: 0;
+    font-size: rem(12);
+    letter-spacing: 0;
+    line-height: rem(16);
+    font-weight: bold;
+    padding-left: rem(27);
+    padding-top: rem(27);
+  }
+  &__description{
+    font-weight: $medium;
+    font-size: rem(32);
+    letter-spacing: 0;
+    line-height: rem(48);
+    color: $color-five;
+    padding-left: rem(27);
+    padding-bottom: rem(27);
+    padding-right: rem(27);
+  }
+  &__list{
+    position: absolute;
+    top: 8.7rem;
+    display: flex;
+    width: 54%;
+    justify-content: center;
+    letter-spacing: .5rem;
+  }
+  &__icon{
+    font-size: 10px;
+    color: #341F97;
+  }
 }
-.active{
-  color: $color-one;
+.owl-nav{
+  display: none;
 }
-
-.form{
-  width: 46.6%;
+.owl-dots{
+  background-color: white;
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  width: 67%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   @include display(tablet-small-down){
     width: 100%;
   }
-  &__primary{
-    padding-left: rem(104);
-    padding-top: rem(93);
-    padding-right: rem(106);
-    display: flex;
-    flex-direction: column;
-    @include display(tablet-medium-down){
-      padding-left: 4.5rem;
-      padding-right: 4.625rem;
-    }
+}
+.owl-stage-outer{
+  width: 67%;
+  background-color: white;
+  @include display(tablet-small-down){
+    width: 100%;
+  }
+}
+.owl-item.active{
+  margin-right: -31px !important;
+}
+
+.owl-carousel{
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#chart1{
+  height: 203px ;
+  width: 406px ;
+} 
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #341F97 !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+  background: #C8D6E5;
+}
+.funnel{
+  padding-left: 19.6875rem;
+  padding-top: rem(77);
+  position: relative;
+  bottom: 13rem;
+  padding-left: 20rem;
+  background-color: $color-seven;
+  margin-bottom: 0;
+  padding-bottom: rem(107);
+  @include display(tablet-small-down){
+    padding-left: 8.6875rem;
+    padding-top: 15.8125rem;
   }
   &__title{
-    text-align: left;
-    font: normal normal 600 32px/42px Poppins;
-    letter-spacing: 0px;
-    color: #222F3E;
-    opacity: 1;
+    font-weight: $SemiBold;
+    font-size: rem(40);
+    letter-spacing: 0;
+    line-height: rem(60);
+    color: #4A545E;
     margin: 0;
-    margin-bottom: rem(10);
-  }
-  &__description{
-    text-align: left;
-    font: normal normal normal 16px/24px Poppins;
-    letter-spacing: 0px;
-    color: #8395A7;
-    opacity: 1;
-    margin: 0;
-    padding-bottom: rem(57);
-  }
-  &__buttons{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: rem(36);
-  }
-  &__button{
-    background-color: #3b5998;
-    padding: .69rem rem(55);
-    border-radius: rem(8);
-    display: flex;
-    justify-content: center;
-    @include display(desktop-down){
-      padding: 0.69rem 1.9rem;
+    padding-bottom: rem(47);
+    &-2{
+      font-weight: $medium;
+      margin: 0;
+      color: $color-eight;
+      letter-spacing: 0;
+      line-height: rem(35);
+      font-size: rem(24);
+      padding-bottom: rem(24);
+      padding-top: rem(10);
     }
+  }
+  &__body{
+    display: flex;
     @include display(tablet-small-down){
-      padding: 0.69rem 4.2rem;
-    }
-    @include display(mobile){
-      padding: 0.69rem 1.9rem;
-    }
-    &--google{
-      background-color: white;
-      border: 1px solid #C8D6E5;
-    }
-    &--linkedin{
-      background-color: #0077B7;
+      flex-direction: column;
     }
   }
-  .form__group-label1{
-    position: relative;
-  }
-  &__input-email{
-    position: relative;
-    padding: rem(16) 0;
-    padding-left: rem(16.5);
-    border: 1px solid $color-three;
-    width: 95%;
-    opacity: 1;
-    border-radius: rem(4);
-    text-align: left;
-    font-size: rem(14);
-    letter-spacing: 0.13px;
-    color: $color-two;
-    opacity: 1;
-    font-weight: normal;
-    margin-bottom: rem(36);
-    &:focus{
-      outline: none;
-    }
-  }
-  &__error-email{
-    border: solid 2px $error;
+  &__img{
+    padding-right: rem(10);
+    margin-left: rem(-6);
   }
   
-  &__label-error-email{
-    display: none;
-    position: absolute;
-    color: $error;
-    font-size: rem(12);
-    letter-spacing: rem(0.4);
-    line-height: rem(16);
-    top: 3.5rem;
-    left: 1rem;
-  }
-  &__label-email{
-    font-size: rem(14);
-    color: $color-two;
-    letter-spacing: 0.13px;
-    position: relative;
-    top: -4.4rem;
-    left: 1rem;
-    cursor: text;
-    transition: top 200ms ease-in,
-      left 200ms ease-in;
-  }
-  &__input-password{
-    padding: rem(16) 0;
-    padding-left: 1.2rem;
-    font-size: rem(14);
-    color: $color-two;
-    border-radius: rem(4);
-    letter-spacing: 0.13px;
-    width: 95%;
-    border: 1px solid $color-three;
-    margin-bottom: rem(35);
-    cursor: text;
-    &:focus{
-      outline: none;
-    }
-  }
-  &__label-pass{
-    font-size: rem(14);
-    color: $color-two;
-    letter-spacing: 0.13px;
-    position: relative;
-    top: -4.4rem;
-    left: 1rem;
-    cursor: text;
-    transition: top 200ms ease-in,
-      left 200ms ease-in;
-  }
-  &__label-error-password{
-    display: none;
-    position: absolute;
-    color: $error;
-    font-size: rem(12);
-    letter-spacing: rem(0.4);
-    line-height: rem(16);
-    top: 3.5rem;
-    left: 1rem;
-  }
-  &__group-label2{
-    position: relative;
-  }
-  &__error-password{
-    border: solid 2px $error;
-  }
-  &__eye{
-    top: rem(18.32);
-    position: absolute;
-    width: 1.3175rem;
-    right: rem(20.52);
-    cursor: pointer;
-  }
-  &__eye2{
-    top: rem(18.32);
-    position: absolute;
-    width: 2rem;
-    right: rem(20.52);
-    cursor: pointer;
-  }
-  &__description2{
-    color: #6C5DD3;
-    font-size: rem(16);
-    letter-spacing: 0;
-    line-height: rem(24);
-    font-weight: normal;
-    text-align: right;
-    margin-bottom: rem(26);
-    cursor: pointer;
-  }
-  &__button-secondary{
-    margin: 0 auto;
-    border: none;
-    padding: 1.25rem 5.568rem;
-    background-color: $color-four;
-    color: white;
-    font-size: rem(14);
-    letter-spacing: 0px;
-    font-weight: bold;
-    border-radius: rem(50);
-    cursor: pointer;
-    margin-bottom: rem(87);
-    &:hover{
-      opacity: .9;
-    }
-  }
-  &__description3{
-    text-align: center;
-    font-weight: normal;
-    color: #576574;
-    font-size: rem(16);
-    letter-spacing: 0;
-    line-height: rem(24);
+  &__text{
     margin: 0;
-    @include display(tablet-small-down){
-      margin-bottom: 3rem;
+    font-size: rem(14);
+    font-weight: normal;
+    color: $color-eight;
+    padding-right: rem(102);
+    letter-spacing: 0;
+    line-height: rem(24);
+    padding-bottom: 4.5rem;
+  }
+  &__button{
+    background-color: white;
+    border-radius: rem(50);
+    text-decoration: none;
+    color: #11142D;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 rem(70);
+    padding-top: rem(19);
+    padding-bottom: rem(17);
+    transition: opacity;
+    
+    &:hover{
+      opacity: .7;
     }
   }
-  &__hightlight-1{
-    color: #3345D7;
-    cursor: pointer;
-  }
 }
-.form__input-password:focus ~ .form__label-pass,
-.form__input-password:not(:placeholder-shown).form__input-password:not(:focus)~.form__label-pass{
-  top: -6.1rem;
-  background-color: white;
-  width: 18%;
-  padding-left: rem(3);
-  font-size: rem(12);
+.bg-primary{
+  background-color: $color-seven;
 }
-.form__input-email:focus ~ .form__label-email,
-.form__input-email:not(:placeholder-shown).form__input-email:not(:focus)~.form__label-email{
-  top: -6rem;
-  background-color: white;
-  width: 27%;
-  padding-left: rem(3);
-  font-size: rem(12);
-} 
+.nav__icon--small{
+  display: block;
+  padding-top: rem(19);
+  padding-left: 1.14rem;
+}

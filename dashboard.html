@@ -12,17 +12,25 @@
   <!-- Icons and favicons -->
   <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="css/icomoon/style.css">
+  <script src="https://kit.fontawesome.com/ce3b26dc73.js" crossorigin="anonymous"></script>
   <!-- STYLES CSS -->
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="vendor/normalize.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- libraries to charts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.js"></script>
 </head>
 
 <body>
   <div class="container">
-
-    <header class="header container">
+    <!-- header section -->
+    <header class="header-dash container">
       <section class="search">
         <span class="search__icon icon-search"></span>
         <input class="search__input" type="text" placeholder="Buscar...">
@@ -30,7 +38,7 @@
       <section class="profile">
         <span class="profile__icon-help icon-help"></span>
         <img class="profile__notification" src="./img/notification.svg" alt="notification">
-        
+
         <img class="profile__email" src="./img/email.svg" alt="email notification">
         <img class="profile__img" src="./img/profile1.png" alt="img profile" width="39">
         <span class="profile__name">Liliana Mora</span>
@@ -40,11 +48,12 @@
   </div>
   <main class="container">
     <section class="content">
-
+      <!-- header nav on aside -->
       <aside class="nav">
         <ul class="nav__list">
-          <a class="nav__link nav__link--bold" href="#"><span class="nav__icon nav__icon--left icon-nav "></span>Prendo</a>
-          <span class="nav__icon nav__icon--hide nav__icon--left icon-nav-2"></span>
+          <p class="nav__link nav__link--bold js-icon-nav" ><span
+              class="nav__icon nav__icon--left icon-nav js-icon-nav-span "></span>Prendo</p>
+          <span class="nav__icon nav__icon--hide nav__icon--left icon-nav-2 js-icon-nav-2"></span>
           <img class="nav__p" src="./img/P.svg" alt="letter p">
           <li class="nav__item js-nav-item nav__link--active">
             <a class="nav__link nav__link--active js-nav-link" href="#">
@@ -61,13 +70,13 @@
           <li class="nav__item">
             <a class="nav__link" href="#">
               <span class="nav__icon icon-design"></span>Diseña tu sitio
-            </a> 
+            </a>
             <span class="nav__icon icon-design nav__icon--hide"></span>
           </li>
-          <li class="nav__item"> 
+          <li class="nav__item">
             <a class="nav__link" href="#">
               <span class="nav__icon icon-database"></span>Estudiantes / Clientes
-            </a> 
+            </a>
             <span class="nav__icon icon-database nav__icon--hide"></span>
           </li>
           <li class="nav__item">
@@ -85,11 +94,12 @@
           <li class="nav__item">
             <a class="nav__link" href="#">
               <span class="nav__icon icon-settings"></span>Configuración
-            </a> 
+            </a>
             <span class="nav__icon icon-settings nav__icon--hide"></span>
           </li>
         </ul>
       </aside>
+      <!-- section head titles on data students content and courses -->
       <section class="titles">
         <div class="titles__head">
           <h1 class="titles__primary">¡Hola Liliana, así van tus programas!</h1>
@@ -98,7 +108,7 @@
         <div class="titles__date">
           <div class="titles__date-number">
             <img class="titles__date-img" src="./img/date.svg" alt="date icon">
-  
+
             <p class="titles__day">23</p>
             <p class="titles__month">NOV</p>
           </div>
@@ -109,6 +119,7 @@
         </div>
       </section>
     </section>
+    <!-- section courses, clients, campaigns and more -->
     <section class="data">
       <div class="data__students-primary">
         <div class="data__element">
@@ -132,8 +143,8 @@
         </div>
         <div class="data__element">
           <!-- <img src="./img/circle.png" alt="circle data"> -->
-          <canvas id="chart-circle" >
-            
+          <canvas id="chart-circle">
+
           </canvas>
         </div>
         <div>
@@ -144,6 +155,7 @@
         <p class="data__message-text"><span class="data__message-point2">.</span>22 Inactivos</p>
       </div> -->
     </section>
+    <!-- section chart -->
     <section class="chart">
       <div class="chart__data">
         <div class="chart__description">
@@ -161,7 +173,7 @@
           <p class="chart__box-text">Tus cursos</p>
         </div>
         <div class="chart__box-1">
-          <img class="chart__box-img-2" src="./img/sites.png" alt=""your sites>
+          <img class="chart__box-img-2" src="./img/sites.png" alt="" your sites>
           <p class="chart__box-text">Personaliza tus sitios</p>
         </div>
         <div class="chart__box-1">
@@ -174,40 +186,85 @@
         </div>
       </div>
     </section>
-    <section class="results">
-      <div class="results__white">
-        <div class="results__box">
-          <h3 class="results__title">Octubre</h3>
-          <p class="results__description" >$629.75</p>
+    <!-- section slider of results -->
+    <section class="results results--slider">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <h4>
+            <div class="results__box">
+              <h3 class="results__title">Octubre</h3>
+              <p class="results__description">$629.75</p>
+            </div>
+          </h4>
         </div>
-        <div class="results__box">
-          <h3 class="results__title">Octubre</h3>
-          <p class="results__description" >$629.75</p>
+        <div class="item">
+          <h4>
+            <div class="results__box">
+              <h3 class="results__title">Octubre</h3>
+              <p class="results__description">$629.75</p>
+            </div>
+          </h4>
         </div>
-        <div class="results__box">
-          <h3 class="results__title">Octubre</h3>
-          <p class="results__description" >$629.75</p>
+        <div class="item">
+          <h4>
+            <div class="results__box">
+              <h3 class="results__title">Octubre</h3>
+              <p class="results__description">$629.75</p>
+            </div>
+          </h4>
         </div>
-        <div class="results__box">
-          <h3 class="results__title">Octubre</h3>
-          <p class="results__description" >$629.75</p>
+        <div class="item">
+          <h4>
+            <div class="results__box">
+              <h3 class="results__title">Octubre</h3>
+              <p class="results__description">$629.75</p>
+            </div>
+          </h4>
         </div>
-        <div class="results__box">
-          <h3 class="results__title">Octubre</h3>
-          <p class="results__description" >$629.75</p>
+        <div class="item">
+          <h4>
+            <div class="results__box">
+              <h3 class="results__title">Octubre</h3>
+              <p class="results__description">$629.75</p>
+            </div>
+          </h4>
         </div>
-        <div class="results__box">
-          <h3 class="results__title">Octubre</h3>
-          <p class="results__description" >$629.75</p>
+        <div class="item">
+          <h4>
+            <div class="results__box">
+              <h3 class="results__title">Octubre</h3>
+              <p class="results__description">$629.75</p>
+            </div>
+          </h4>
         </div>
+
       </div>
     </section>
+    <article class="funnel">
+      <h3 class="funnel__title">Conoce como crear…</h3>
+      <div class="funnel__body">
+        <img src="./img/funnel-img.png" alt="funnel img" class="funnel__img">
+        <div class="funnel__description">
+          <h4 class="funnel__title-2">Embudos de conversión</h4>
+          <p class="funnel__text">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+          </p>
+          <a href="#" class="funnel__button">
+            Inicia ahora
+          </a>
+        </div>
+      </div>
+    </article>
   </main>
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- Js-->
   <script src="./js/main.js"></script>
-  <!-- fa awesome -->
+  <!-- owl carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

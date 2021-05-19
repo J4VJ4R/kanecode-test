@@ -1,0 +1,349 @@
+.header{
+  display: flex;
+  @include display(tablet-small-down){
+    flex-direction: column;
+  }
+}
+.slider{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 54.4%;
+  @include display(tablet-small-down){
+    width: 100%;
+  }
+  &__img{
+    height: rem(768);
+    width: 100%;
+  }
+  &__logo{
+    position: absolute;
+    top: rem(30);
+  }
+  &__item{
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  &__item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+  }
+  &__title{
+    color: white;
+    font-size: rem(32);
+    font-weight: $SemiBold;
+    line-height: rem(48);
+    text-align: center;
+    letter-spacing: 0;
+    padding: 0 rem(100);
+    margin: 0;
+    @include display(tablet-small-down){
+      padding: 0 1.25rem;
+    }
+    @include display(mobile){
+      font-size: 1.2rem;
+      line-height: 2rem;
+      padding-bottom: .5rem;
+    }
+    @include display(desktop-down){
+      padding: 0 1.25rem;
+    }
+    @include display(tablet-medium-down){
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+  &__text{
+    padding-left: rem(122);
+    padding-right: rem(121);
+    color: white;
+    font-size: rem(16);
+    letter-spacing: 0;
+    line-height: rem(24);
+    font-weight: normal;
+    text-align: center;
+    font-style: normal;
+    margin: 0;
+    opacity: 1;
+    @include display(tablet-small-down){
+      padding-left: 2.625rem;
+      padding-right: 2.5625rem;
+    }
+    @include display(desktop-down){
+      padding-left: 0.625rem;
+      padding-right: 0.5625rem;
+    }
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+  }
+  &__pagination{
+    margin: 0;
+    position: absolute;
+    bottom: rem(60);
+    display: flex;
+    padding-left: 0;
+    @include display(mobile){
+      bottom: rem(30);
+    }
+    &-item{
+      cursor: pointer;
+      color: white;
+      opacity: 1;
+      font-size: 14px;
+      content: "\f111";
+      letter-spacing: 7px;
+    }
+  }
+  &__description{
+    position: absolute;
+    top: 30.125rem;
+  }
+}
+.deactive{
+  color: white;
+}
+.active{
+  color: $color-one;
+}
+
+.form{
+  width: 46.6%;
+  &__link{
+    color: white;
+    text-decoration: none;
+  }
+  @include display(tablet-small-down){
+    width: 100%;
+  }
+  &__primary{
+    padding-left: rem(104);
+    padding-top: rem(93);
+    padding-right: rem(106);
+    display: flex;
+    flex-direction: column;
+    @include display(tablet-medium-down){
+      padding-left: 4.5rem;
+      padding-right: 4.625rem;
+    }
+  }
+  &__title{
+    text-align: left;
+    font: normal normal 600 32px/42px Poppins;
+    letter-spacing: 0px;
+    color: #222F3E;
+    opacity: 1;
+    margin: 0;
+    margin-bottom: rem(10);
+  }
+  &__description{
+    text-align: left;
+    font: normal normal normal 16px/24px Poppins;
+    letter-spacing: 0px;
+    color: #8395A7;
+    opacity: 1;
+    margin: 0;
+    padding-bottom: rem(57);
+  }
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: rem(36);
+  }
+  &__button{
+    background-color: #3b5998;
+    padding: .69rem rem(55);
+    border-radius: rem(8);
+    display: flex;
+    justify-content: center;
+    @include display(desktop-down){
+      padding: 0.69rem 1.9rem;
+    }
+    @include display(tablet-small-down){
+      padding: 0.69rem 4.2rem;
+    }
+    @include display(mobile){
+      padding: 0.69rem 1.9rem;
+    }
+    &--google{
+      background-color: white;
+      border: 1px solid #C8D6E5;
+    }
+    &--linkedin{
+      background-color: #0077B7;
+    }
+  }
+  .form__group-label1{
+    position: relative;
+  }
+  &__input-email{
+    position: relative;
+    padding: rem(16) 0;
+    padding-left: rem(16.5);
+    border: 1px solid $color-three;
+    width: 100%;
+    opacity: 1;
+    border-radius: rem(4);
+    text-align: left;
+    font-size: rem(14);
+    letter-spacing: 0.13px;
+    color: $color-two;
+    opacity: 1;
+    font-weight: normal;
+    margin-bottom: rem(36);
+    &:focus{
+      outline: none;
+    }
+  }
+  &__error-email{
+    border: solid 2px $error;
+  }
+  
+  &__label-error-email{
+    display: none;
+    position: absolute;
+    color: $error;
+    font-size: rem(12);
+    letter-spacing: rem(0.4);
+    line-height: rem(16);
+    top: 3.5rem;
+    left: 1rem;
+  }
+  &__label-email{
+    font-size: rem(14);
+    color: $color-two;
+    letter-spacing: 0.13px;
+    position: relative;
+    top: -4.4rem;
+    left: 1rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+      left 200ms ease-in;
+  }
+  &__input-password{
+    padding: rem(16) 0;
+    padding-left: 1.2rem;
+    font-size: rem(14);
+    color: $color-two;
+    border-radius: rem(4);
+    letter-spacing: 0.13px;
+    width: 100%;
+    border: 1px solid $color-three;
+    margin-bottom: rem(35);
+    cursor: text;
+    &:focus{
+      outline: none;
+    }
+  }
+  &__label-pass{
+    font-size: rem(14);
+    color: $color-two;
+    letter-spacing: 0.13px;
+    position: relative;
+    top: -4.4rem;
+    left: 1rem;
+    cursor: text;
+    transition: top 200ms ease-in,
+      left 200ms ease-in;
+  }
+  &__label-error-password{
+    display: none;
+    position: absolute;
+    color: $error;
+    font-size: rem(12);
+    letter-spacing: rem(0.4);
+    line-height: rem(16);
+    top: 3.5rem;
+    left: 1rem;
+  }
+  &__group-label2{
+    position: relative;
+  }
+  &__error-password{
+    border: solid 2px $error;
+  }
+  &__eye{
+    top: rem(18.32);
+    position: absolute;
+    width: 1.3175rem;
+    right: rem(20.52);
+    cursor: pointer;
+    
+  }
+  &__eye2{
+    top: rem(18.32);
+    position: absolute;
+    width: 2rem;
+    right: rem(20.52);
+    cursor: pointer;
+  }
+  &__description2{
+    color: #6C5DD3;
+    font-size: rem(16);
+    letter-spacing: 0;
+    line-height: rem(24);
+    font-weight: normal;
+    text-align: right;
+    margin-bottom: rem(26);
+    cursor: pointer;
+    @include display(tablet-small-down){
+      text-align: center;
+    }
+  }
+  &__button-secondary{
+    margin: 0 auto;
+    border: none;
+    padding: 1.25rem 5.568rem;
+    background-color: $color-four;
+    color: white;
+    font-size: rem(14);
+    letter-spacing: 0px;
+    font-weight: bold;
+    border-radius: rem(50);
+    cursor: pointer;
+    margin-bottom: rem(87);
+    &:hover{
+      opacity: .9;
+    }
+  }
+  &__description3{
+    text-align: center;
+    font-weight: normal;
+    color: #576574;
+    font-size: rem(16);
+    letter-spacing: 0;
+    line-height: rem(24);
+    margin: 0;
+    @include display(tablet-small-down){
+      margin-bottom: 3rem;
+    }
+  }
+  &__hightlight-1{
+    color: #3345D7;
+    cursor: pointer;
+  }
+}
+.form__input-password:focus ~ .form__label-pass,
+.form__input-password:not(:placeholder-shown).form__input-password:not(:focus)~.form__label-pass{
+  top: -6.1rem;
+  background-color: white;
+  width: 18%;
+  padding-left: rem(3);
+  font-size: rem(12);
+}
+.form__input-email:focus ~ .form__label-email,
+.form__input-email:not(:placeholder-shown).form__input-email:not(:focus)~.form__label-email{
+  top: -6rem;
+  background-color: white;
+  width: 27%;
+  padding-left: rem(3);
+  font-size: rem(12);
+} 

@@ -2,7 +2,7 @@
 
 
 
-![Project image](https://i.ibb.co/dQMpRZM/lasles.png)
+![Project image](https://i.postimg.cc/pdhSSrVP/dashboard.png)
 
 <a id="content"></a> 
 
@@ -12,13 +12,13 @@
 - [Resources](#resources)
 - [Learning Objetives](#learning-objectives)
 - [Tecnologies](#technologies)
-- [To see preview](https://laslesvpn2.herokuapp.com/)
-- [To see design](https://www.figma.com/file/FBKj7FLMIVLBuBoAj8alwP/LaslesVPN-Test?node-id=0%3A1)
+- [To see preview](https://kane-code.herokuapp.com/)
+
 
 ### Description ⌨️
 
 <a id="description"></a>
-In this project we will to create a landing page with HTML, CSS and JS, link to see preview https://laslesvpn-test.herokuapp.com/
+This is a test about frontend where we will to create a login, home and colapsed menu on responsive design, it's need use only CSS, HTML and JS o jQUERY, without any frameworks like bootstrato, bulma or anyone https://kane-code.herokuapp.com/
 
 ## HTML
 
@@ -62,6 +62,25 @@ JavaScript (JS) is a lightweight, interpreted, or just-in-time programming langu
 [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 ___
 
+## BEM
+
+There are plenty of methodologies out there aiming to reduce the CSS footprint, organize cooperation among programmers and maintain large CSS codebases. This is obvious in large projects like Twitter, Facebook and Github, but other projects often grow into some “Huge CSS file” state pretty quickly.
+
+No matter what methodology you choose to use in your projects, you will benefit from the advantages of more structured CSS and UI. Some styles are less strict and more flexible, while others are easier to understand and adapt in a team.
+
+The reason I choose BEM over other methodologies comes down to this: it is less confusing than the other methods (i.e. SMACSS) but still provides us the good architecture we want (i.e. OOCSS) and with a recognizable terminology.
+
+[More here](http://getbem.com/introduction/)
+___
+
+## Chart.js
+
+Chart.js is a free open-source JavaScript library for data visualization, which supports 8 chart types: bar, line, area, pie (doughnut), bubble, radar, polar, and scatter. Created by London-based web developer Nick Downie in 2013, now it is maintained by the community and is the second most popular JS charting library on GitHub by the number of stars after D3.js, considered significantly easier to use though less customizable than the latter. Chart.js renders in HTML5 canvas and is widely covered as one of the best data visualization libraries. It is available under the MIT license
+
+[More here](https://www.chartjs.org/docs/latest/)
+___
+
+
 ### Resources 📖
 <a id="resources"></a>
 
@@ -73,6 +92,8 @@ ___
 - [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+- [More here](http://getbem.com/introduction/)
+
 ### Learning Objectives 🚀
 <a id="learning-objectives"></a>
 - Gain more expertise with HTML5, CSS AND JS to design a responsive landing page
@@ -82,28 +103,26 @@ ___
 - CSS
 - HTML
 - JS
+- BEM
 - RESPONSIVE DESIGN
 - ACCESIBILITY
 - Figma
+- xd Adobe
+- Chart.js
 
 ### How to use ⚙️
 
-This project is only for porfolio and reading, also if possible you can downloading for your exercise or academic task.
+This project is only for portfolio and reading, also if possible you can downloading for your exercise or academic task.
 
 
 ### Authors info ✒️
-- Oscar Andres Montes | Front-end Software Developer
-- Github [Andmontc](https://github.com/andmontc) 
-- Twitter [@damstyx](https://twitter.com/damstyx) 
-- Linkedin [andmontc](https://www.linkedin.com/in/andmontc) 
-___
 
 - Javier Jaramillo | Systems Engineer | Front-end Software Developer
 - Twitter - [@javifullstack](https://twitter.com/javifullstack) :blue_heart:
 - [Linkeding](https://www.linkedin.com/in/javier-jaramillo-346b681a1/) :gem:
 
 
-### ⌨ with ❤ ️and ☕ by Oscar Andres Montes and Javier Jaramillo :octocat:
+### ⌨ with ❤ ️and ☕ by Javier Jaramillo :octocat:
 
-##### March, 2021. Colombia
+##### May, 2021. Colombia
 

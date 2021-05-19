@@ -72,13 +72,38 @@ $(document).ready(function () {
     }
   })
   //dashboard
-  //active buttons
+  //active buttons on menu left
   $(document).on('click', 'li', function(){
     $(this).addClass('nav__link--active').siblings().removeClass('nav__link--active');
     $('.js-nav-link').removeClass('nav__link--active');
     $('.js-nav-icon').removeClass('nav__icon--active');
   })
-  
+  //section slider on results
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+});
+//burger menu
+$('.js-icon-nav').on('click', function(){
+  $(this).css('display', 'none');
+  $('.js-icon-nav-2').addClass('nav__icon--small');
+});
+$('.js-icon-nav-2').on('click', function(){
+  $(this).css('display', 'none');
+  $('.js-icon-nav').css('display', 'block');
+})
 });
 //section charts
 let ctx = document.getElementById('chart1').getContext('2d');
@@ -99,6 +124,7 @@ const chartCircle1 = new Chart(chartCircle, {
     }]
   }
 });
+//bar chart
 let chart2 = new Chart(ctx, {
   type: 'bar',
   data:{
